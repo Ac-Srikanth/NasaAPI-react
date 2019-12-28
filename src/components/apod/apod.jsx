@@ -36,7 +36,7 @@ export default class APOD extends Component {
                             <h4 className="karla">{this.state.data.title}</h4>
                         </div>
                         <div className="col-12 col-lg-6">
-                            <h6 className="text-secondary font-weight-light text-lg-right">Date : {this.state.data.date}</h6>
+                            <h6 className="text-secondary font-weight-light text-lg-right">{this.state.data.date}</h6>
                         </div>
 
                         <div className="col-12 col-lg-5 my-2">
