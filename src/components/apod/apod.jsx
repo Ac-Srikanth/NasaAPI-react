@@ -18,7 +18,7 @@ export default class APOD extends Component {
                 this.setState({ data: response.data })
                 this.setState({ dataExists: true })
 
-                // console.log(this.state.data)
+                console.log(this.state.data)
 
             })
 
@@ -49,7 +49,7 @@ export default class APOD extends Component {
                         </div>
                         <div className="col-12 col-lg-7 my-2">
                             <p className="text-justify text-wrap standard-font-grey">{this.state.data.explanation}</p>
-                            <small className="karla text-secondary">Copyright: {this.state.data.copyright} </small>
+                            <small className="karla text-secondary">Copyright: {(this.state.data.copyright == undefined) ? 'Open Source' : this.state.data.copyright} </small>
 
                         </div>
                     </div>
