@@ -1,37 +1,28 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-import Updatedb from './components/updatedb/updatedb';
-import APOD from './components/apod/apod';
-
+import Updatedb from './components/updatedb/updatedb.js';
+import APOD from './components/apod/apod.js';
 
 export default class App extends Component {
-  updatedb = () => {
-    console.log('This is from new function.')
-  }
+	updatedb = () => {
+		console.log('This is from new function.');
+	};
 
-  render() {
-    return (
-      <div className="App" >
-        <APOD></APOD>
+	render() {
+		return (
+			<div className='App'>
+				<APOD />
 
-        <Router>
-          <Link to="/updatedb"></Link>
-          <Switch>
-            <Route exact path="/updatedb">
-              <Updatedb></Updatedb>
-            </Route>
-          </Switch>
-        </Router>
-      </div>
-
-
-    );
-  }
+				<Router>
+					<Link to='/updatedb' />
+					<Switch>
+						<Route exact path='/updatedb'>
+							<Updatedb />
+						</Route>
+					</Switch>
+				</Router>
+			</div>
+		);
+	}
 }
-
